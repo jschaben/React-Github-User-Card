@@ -53,10 +53,10 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <h1>GitHub User</h1>
+        <h1>GitHub Users</h1>
         <Form>
           <Row form>
-            <Col md={7}>
+            <Col md={8}>
               <Input
                 type="text"
                 placeholder="Search Users"
@@ -64,10 +64,12 @@ class App extends React.Component {
                 onChange={this.handleChange}
                 name="userSearch"
               />
+              <br />
             </Col>
-            <Button color="primary" onClick={this.findUser}>
+            <Button onClick={this.findUser}>
               Find User
             </Button>
+            <br />
           </Row>
         </Form>
         {this.state.user.map(item => (
